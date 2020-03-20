@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>front</title>
+<style>
+
+.signin {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 25%;
+  height : 35%;
+  border-radius: 5px;
+}
+
+
+
+input[type=text], input[type=password] {
+  width: auto;
+  padding: 5px 20px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #DEDDDE;
+}
+
+button {
+  background-color: #FF3364;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+p{
+  color: black;
+}
+
+
+.signup {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #282728;
+  border-radius: 5px;
+  color: gray;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: center;
+  bottom: 10px;
+  right: 28px;
+  width: 25%;
+}
+
+.form-popup {
+  display: none;
+  border-radius: 10px;
+  width: 24%;
+  height:65%;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  width: 80%;
+  padding: 10px;
+  background-color: #282728;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.form-container input[type=text], .form-container input[type=text],
+.form-container input[type=text], .form-container input[type=password] {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #636465;
+  background-color: #282728;
+  border-radius: 5px;
+}
+
+
+.form-container input[type=text], .form-container input[type=text],
+.form-container input[type=text], .form-container input[type=password] {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #636465;
+}
+
+.form-container .btn {
+  background-color: #FF3364;
+  border-radius: 5px;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  height: 8%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-popup .cancel {
+  transition: 0.3s;
+  width: 90%;
+  height : 10%;
+  background-color: white;
+  color: black;
+}
+
+
+
+</style>
+
+<body>
+<center>
+<h1 style="font-size:30px;">Welcome to our Book store!!!</h1>
+<button class="signup" id="signup" onclick="openForm()">Not a member? <b>Sign up now!</b></button>
+
+<div class="form-popup" id="myForm">
+  <form method="POST" class="form-container" action="register.php">
+    <input type="text" placeholder="First & Last name" name="name" required>
+    <input type="text" placeholder="E-Mail" name="email" required>
+	<input type="password" placeholder="Password" name="psw" required>
+	<input type="password" placeholder="Confirm Password" name="cpsw" required>
+    <button type="submit" name="submit">Create account</button></form>
+	<button type="button" class="cancel" onclick="closeForm()">Click to Login</b></button>
+</div>
+<br>
+
+<form class="signin" name="signin" id="signin" method="post" action="login.php"><br>
+<input type="text" placeholder="User name or E-Mail" name="uname" required><br><br>
+<input type="password" placeholder="Password" name="psw" required><br><br>
+<button style="border-radius:5px;">sign in</button>
+</form>
+<p style="color:gray;">continue with <b style="color:black">Google, Twitter</b> or <b style="color:black">Facebook</b></p>
+<br>
+</center>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  document.getElementById("signin").style.display = "none";
+  document.getElementById("signup").style.display = "none";
+}
+
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("signin").style.display = "block";
+  document.getElementById("signup").style.display = "block";
+}
+</script>
+</body>
+</head>
+</html>

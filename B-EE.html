@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<title>EEE</title>
+<style>
+.header {
+  height:100px;
+  width:100%;
+  background-color:black;
+  }
+.header a{
+  text-size:3px;
+  color:white;
+}
+  
+.header h1{
+  text-size:50px;
+  color:white;
+  text-align:center;
+}
+
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: black;
+  width: 10%;
+  height: 400px;
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: white;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border:  2px solid black;
+  width: 80%;
+  border-left: none;
+  height: 400px;
+}
+
+span {
+  border: 1px solid black;
+  padding:  0em 1em;
+  border-radius: 20px;
+  font-size: 22px;
+  line-height: 5;
+  
+}
+
+span.ex1 { 
+  -webkit-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+
+</style>
+<body>
+
+<div class="header">
+<a href="homepage.html" style="color:white">Back</a>
+  <br><h1>   E-Book Store  </h1><br>
+</div><hr size="5px">
+
+       <h2 style="align-let:10px"><span>Electrical and Electronics Books</span></h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'SP')" id="defaultOpen">Signal Processing</button>
+  <button class="tablinks" onclick="openCity(event, 'MC')">Microcontrollers</button>
+  <button class="tablinks" onclick="openCity(event, 'VL')">VLSI</button>
+
+</div>
+
+<div id="SP" class="tabcontent">
+  <h2>Signal Processing</h2>
+  <form action="order.html" method="post">
+	
+					
+					<table>
+					<tr>
+					<td><img src="snap/ed1.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					<td><img src="snap/ed2.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					<td><img src="snap/ed3.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					<td><img src="snap/ed4.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					</tr></table></br>
+  </form>
+</div>
+
+<div id="MC" class="tabcontent">
+  <h2>Microcontrollers</h2>
+  <form action="order.html" method="post">
+
+					<table><tr>
+					<td><img src="snap/em1.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					<td><img src="snap/em2.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					<td><img src="snap/em3.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					<td><img src="snap/em4.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					</tr></table></br>
+  </form>
+					
+</div>
+
+<div id="VL" class="tabcontent">
+  <h2>VLSI</h2>
+    <form action="order.html" method="post">
+                    <table><tr>
+					<td><img src="snap/ev1.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					<td><img src="snap/ev2.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					<td><img src="snap/ev3.jpg" width="250" height="300">
+					<figcaption><input type="submit" value="Buy Now" /></figcaption></td>
+					</tr></table></br>
+	</form>				
+</div>
+</body>
+<script>
+function openCity(evt, bookName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(bookName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</html>
